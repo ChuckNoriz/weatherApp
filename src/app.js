@@ -9,7 +9,7 @@ const pubDir = path.join(__dirname, '../public');
 const partPath = path.join(__dirname, '../templates/partials');
 const PORT = process.env.PORT || 3000;
 
-//if template folder name is NOT 'views'(default), then one should set defeult folder for views
+//if template folder name is NOT 'views'(default), then one should set defeult folder for views.
 app.set('views',path.join(__dirname,'../templates/views'))
 app.set('view engine', 'hbs');
 hbs.registerPartials(partPath);
