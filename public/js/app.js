@@ -11,7 +11,8 @@ weatherForm.addEventListener('submit',(event) => {
 
     const search = searchInput.value;
 
-    fetch(`http://localhost:3000/weather?address=${search}`)
+    // removed 'http://localhost:3000' from Fetch link cause of Heroku
+    fetch(`/weather?address=${search}`)
     .then((res) => {
     res.json().then((data) => {
         console.log(data)
