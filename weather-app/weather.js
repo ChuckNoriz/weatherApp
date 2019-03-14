@@ -34,7 +34,8 @@ async function getWeather (address) {
                     const forecast = {
                       location: Location,
                       tempo: response.data.currently.temperature,
-                      weather: response.data.currently.icon
+                      weather: response.data.currently.icon,
+                      time: new Date().toLocaleDateString()
                     }
                     return forecast;
                     }
