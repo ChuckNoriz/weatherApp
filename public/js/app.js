@@ -15,7 +15,7 @@ weatherForm.addEventListener('submit',(event) => {
     fetch(`/weather?address=${search}`)
     .then((res) => {
     res.json().then((data) => {
-        console.log(data)
+        weatherBoard.textContent = 'loading...'
         if(data.error){
             weatherBoard.textContent = data.error;
         }else{
